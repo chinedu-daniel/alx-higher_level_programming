@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    new_string = ''
+    result = ""
     for char in my_string:
         if char.lower() != 'c':
-            new_string += char
+            result += char
 
-            return new_string
+    return result
