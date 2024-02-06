@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 class Square:
-    """
-    Represents a square.
-    """
-    pass
+    def square(self):
+        print('square')
+
+s = Square()
+s.square()
