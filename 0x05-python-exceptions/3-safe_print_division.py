@@ -3,8 +3,8 @@
 def safe_print_division(a, b):
     try:
         result = a / b
-    except (ValueError, TypeError):
-        print("Error: Please provide vaid numerical inputs.")
+    except ZeroDivisionError:
+        result = None
     finally:
-        print("{:d} / {:d} = {}".format(a, b, result), end="")
+        print("Inside result: {}".format(result), end="")
     return result
