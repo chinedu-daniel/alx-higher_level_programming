@@ -26,7 +26,7 @@ class Rectangle:
 
         """ width property """
 
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -41,7 +41,7 @@ class Rectangle:
         
         """ height property """
 
-        return self.__width
+        return (self.__width)
 
     @height.setter
     def height(self, value):
@@ -71,9 +71,9 @@ class Rectangle:
 
         if self.__width == 0 or self.__height == 0:
             return ""
-        return '\n'.join(['#' * self.__width] * self._height)
+        return ('\n'.join(['#' * self.__width] * self._height))
 
     def __repr__(self):
 
         """ returns  string representation of a rectangle """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return (f"Rectangle({self.__width}, {self.__height})")
