@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+
 """ python task """
 
 class Rectangle:
 
     """
 
-    clss that defines a rectangle
+    class that defines a rectangle
 
     """
     def __init__(self, width=0, height=0):
@@ -15,7 +16,11 @@ class Rectangle:
     @property
     def width(self):
 
-        """ width property """
+        """ 
+
+        width property 
+
+        """
 
         return (self.__width)
 
@@ -30,7 +35,11 @@ class Rectangle:
     @property
     def height(self):
 
-        """ height property """
+        """ 
+
+        height property
+
+        """
 
         return (self.__height)
 
@@ -44,13 +53,21 @@ class Rectangle:
 
     def area(self):
 
-        """ public instaance tat returns the area of a rectangle """
+        """ 
+
+        public instaance tat returns the area of a rectangle 
+
+        """
 
         return ((self.__width) * (self.__height))
 
     def perimeter(self):
 
-        """ public instance that returns the perimeter of a rectangle """
+        """ 
+
+        public instance that returns the perimeter of a rectangle 
+
+        """
 
         if self.__width == 0 or self.__height == 0:
             return (0)
@@ -58,7 +75,11 @@ class Rectangle:
 
     def __str__(self):
 
-        """ should print rectangle with the character """
+        """ 
+
+        should print rectangle with the character 
+
+        """
 
         if self.__width == 0 or self.__height == 0:
             return ""
