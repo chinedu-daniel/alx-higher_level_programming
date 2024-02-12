@@ -1,13 +1,33 @@
 #!/usr/bin/python3
-"""A python3 program"""
+
+"""
+
+A python3 program
+
+"""
 
 class Rectangle:
+
+    """
+
+    class thta defines a rectangle
+
+    """
+
     def __init__(self, width=0, height=0):
+
+        """
+
+        Instantiation of width and height
+
+        """
+        
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """ width property """
         return self.__width
 
     @width.setter
@@ -20,6 +40,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """ Height property """
         return self.__height
 
     @height.setter
