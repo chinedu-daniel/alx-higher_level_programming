@@ -13,6 +13,13 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+
+        """
+
+        instantiation of width and height
+
+        """
+
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -26,7 +33,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        if not isintance(value, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -50,6 +57,7 @@ class Rectangle:
     def area(self):
 
         """ public instance that returns the area of a rectangle """
+
         return (self.__width * self.__height)
 
     def perimeter(self):
@@ -69,9 +77,10 @@ class Rectangle:
         return ('\n'.join([str(self.print_symbol) * self.__width] * self.__height))
 
     def __repr__(self):
+
         """ return a string representation of the rectangle """
 
-        return (f"Rectanle({self.__width}, {self.__height})")
+        return (f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
 
