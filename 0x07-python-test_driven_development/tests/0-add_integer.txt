@@ -1,0 +1,21 @@
+0-add_integer(1, 2)
+
+0-add_integer(1.5, 2.5)
+
+0-add_integer(2.5, 3.5)
+
+0-dd_integer(100.s, 50)
+
+0-add_integer("1", 2)
+Traceback (most recent call last):
+
+	...
+
+TypeError: a must be an integer or b must be an integer
+
+0-add_integer(1, "2")
+Traceback (most reent call last):
+
+	...
+
+TypeError: a must be an integer or b must be an integer
