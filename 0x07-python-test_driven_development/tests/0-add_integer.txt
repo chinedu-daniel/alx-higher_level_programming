@@ -11,7 +11,7 @@ Traceback (most recent call last):
 
 	...
 
-TypeError: a must be an integer
+TypeError: b must be an integer
 
 0-add_integer(1, "2")
 Traceback (most reent call last):
