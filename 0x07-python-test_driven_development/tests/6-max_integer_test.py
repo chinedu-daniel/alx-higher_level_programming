@@ -1,11 +1,13 @@
+#!/usr/bin/python3
+
 import unittest
 
-def max_integer(lst=[]):
+def max_integer(list=[]):
     """
     Returns the maximum integer or float from a list of numbers.
 
     Args:
-        lst (list): A list of integers or floats.
+        list: A list of integers or floats.
 
     Returns:
         int or float: The maximum number in the list. Returns None if the list is empty.
@@ -16,10 +18,10 @@ def max_integer(lst=[]):
 
     """
 
-    if not lst:
+    if not list:
         return None
-    max_num = lst[0]
-    for num in lst:
+    max_num = list[0]
+    for num in list:
         if num > max_num:
             max_num = num
     return max_num
