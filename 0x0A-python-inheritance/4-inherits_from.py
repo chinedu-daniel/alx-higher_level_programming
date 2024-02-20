@@ -20,8 +20,6 @@ def inherits_from(obj, a_class):
 
     """
 
-    obj_classes = type(obj).mro()
-
-    return any(issubclass(cls, a_class) for cls in obj_classes)
+    return any(a_class in cls.mro() for cls in type(obj).mro())
 
     
