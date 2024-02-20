@@ -1,6 +1,4 @@
-import unittest
-
-class TestMyList(unittest.TestCase):
+class TestMyList:
 
 	"""
 	
@@ -8,22 +6,24 @@ class TestMyList(unittest.TestCase):
 
 	"""
 
-	def test_print_sorted(self):
+	def test_print_sorted():
 
-	"""
-	Tests the print_sorted method of the MyList class
+		"""
+		Tests the print_sorted method of the MyList class
 
-	The method should print the elements of the list sorted in ascending order
+		The method should print the elements of the list sorted in ascending order
 
-	"""
+		"""
 
-	l = MyList([3, 1, 2])
+		l = MyList([3, 1, 2])
+		expected_output = '[1, 2, 3]'
 
-	with captured_output() as (out, err):
 		l.print_sorted()
-	output = out.getvalue().strip()
+		output = sys.stdout.getvalue().strip()
 
-	self.assertEqual(output, '[1, 2, 3]', "Printed list is not sorted,")
+		assert output == expected_output, "Printed list is not sorted."
+
+		sys.stdout = saved_stdout
 
 if __name__ == '__main__':
-	unittest.main()
+	TestMyList.test_print_sorted()
