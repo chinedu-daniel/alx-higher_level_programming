@@ -74,7 +74,6 @@ class Rectangle(BaseGeometry):
         """
         return self.__width * self.__height
 
-
 class Square(Rectangle):
     """
     Represents a square, inheriting from Rectangle.
@@ -92,3 +91,38 @@ class Square(Rectangle):
             ValueError: If size is less than or equal to 0.
         """
         super().__init__(size, size)
+
+    @property
+    def size(self):
+        """
+        Get the size of the square.
+
+        Returns:
+            int: The size of the square.
+        """
+        return self._Rectangle__width
+
+    @size.setter
+    def size(self, value):
+        """
+        Set the size of the square.
+
+        Parameters:
+            value (int): The size of the square.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is less than or equal to 0.
+        """
+        self._Rectangle__width = self.integer_validator("size", value)
+        self._Rectangle__height = self.integer_validator("size", value)
+
+    def __str__(self):
+        """
+        Return a string representation of the square.
+
+        Returns:
+            str: A string representation of the square.
+        """
+        return f"[Square] {self._Rectangle__width}/{self._Rectangle__height}"
+
