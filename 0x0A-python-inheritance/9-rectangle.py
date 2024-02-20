@@ -38,6 +38,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """
     Represents a rectangle, inheriting from BaseGeometry.
@@ -67,7 +68,7 @@ class Rectangle(BaseGeometry):
         Returns:
             str: A string representation of the rectangle.
         """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return (f"[Rectangle] {self.__width}/{self.__height}")
 
     def area(self):
         """
