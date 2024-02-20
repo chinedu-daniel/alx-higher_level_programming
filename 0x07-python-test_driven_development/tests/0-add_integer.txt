@@ -1,26 +1,26 @@
+	>>> add_integer = __import__('0-add_integer').add_integer
 
+	>>> add_integer(1, 2)
+    	3
 
-    >>> add_integer(1, 2)
-    3
+    	>>> add_integer(5.5, 3.5)
+    	9
 
-    >>> add_integer(5.5, 3.5)
-    9
+    	>>> add_integer(100.5, 50)
+    	150
 
-    >>> add_integer(100.5, 50)
-    150
+    	>>> add_integer(100, 50.5)
+    	150
 
-    >>> add_integer(100, 50.5)
-    150
+    	>>> add_integer(3.5, 2.5)
+    	6
 
-    >>> add_integer(3.5, 2.5)
-    6
+    	>>> add_integer("1", 2)
+    	Traceback (most recent call last):
+        	...
+    	TypeError: a must be an integer or b must be an integer
 
-    >>> add_integer("1", 2)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer or b must be an integer
-
-    >>> add_integer(1, "2")
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer or b must be an integer
+    	>>> add_integer(1, "2")
+    	Traceback (most recent call last):
+        	...
+    	TypeError: a must be an integer or b must be an integer
