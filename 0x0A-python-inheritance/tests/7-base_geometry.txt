@@ -1,0 +1,35 @@
+from 7-base_geometry import BaseGeometry
+
+class TestBaseGeometry:
+    def test_area_not_implemented(self):
+        bg = BaseGeometry()
+        try:
+            bg.area()
+        except Exception as e:
+            assert str(e) == "area() is not implemented", "Area method should raise 'area() is not implemented' exception"
+
+    def test_integer_validator(self):
+        bg = BaseGeometry()
+        # Test case where value is not an integer
+        try:
+            bg.integer_validator("test", "string")
+        except TypeError as e:
+            assert str(e) == "test must be an integer", "TypeError should be raised for non-integer value"
+
+        # Test case where value is less than or equal to 0
+        try:
+            bg.integer_validator("test", 0)
+        except ValueError as e:
+            assert str(e) == "test must be greater than 0", "ValueError should be raised for value less than or equal to 0"
+
+        # Test case where value is a valid integer
+        try:
+            bg.integer_validator("test", 10)
+        except (TypeError, ValueError):
+            assert False, "No exception should be raised for valid integer value"
+
+if __name__ == "__main__":
+    test_base_geometry = TestBaseGeometry()
+    test_base_geometry.test_area_not_implemented()
+    test_base_geometry.test_integer_validator()
+
