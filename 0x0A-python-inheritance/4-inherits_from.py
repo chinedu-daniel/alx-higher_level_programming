@@ -20,6 +20,6 @@ def inherits_from(obj, a_class):
 
     """
 
-    return any(a_class in cls.mro() for cls in type(obj).mro())
+    return (a_class in type(obj).mro())
 
     
