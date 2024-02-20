@@ -1,0 +1,29 @@
+import unittest
+
+class TestMyList(unittest.TestCase):
+
+	"""
+	
+	A unittest class for testing the print_sorted method of the MyList class
+
+	"""
+
+	def test_print_sorted(self):
+
+	"""
+	Tests the print_sorted method of the MyList class
+
+	The method should print the elements of the list sorted in ascending order
+
+	"""
+
+	l = MyList([3, 1, 2])
+
+	with captured_output() as (out, err):
+		l.print_sorted()
+	output = out.getvalue().strip()
+
+	self.assertEqual(output, '[1, 2, 3]', "Printed list is not sorted,")
+
+if __name__ == '__main__':
+	unittest.main()
