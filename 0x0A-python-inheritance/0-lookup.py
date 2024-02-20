@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-
+""" a python file """
 
 def lookup(obj):
     """
 
-    Looks up information about an object and returns it
+    Returns a list of available attributes and methods of an object.
 
     Parameters:
-    - obj: Any object: the object to look up information for
+    - obj: Any object: the object to look up attributes and methods for.
 
     Returns:
-    - str: A string containing information about the object.
-        If the object is not found, return 'Object not found'
+    - list: A list containing the names of attributee and methods of the object
 
     """
 
