@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """ python 3 file """
+
+
 class BaseGeometry:
     """
     Base class for geometric shapes.
 
-    This class provides common functionality and attributes for geometric shapes.
-    Subclasses can inherit from this class to implement specific geometric shapes.
+    This class provides common functionality and attributes
+    Subclasses can inherit from this class to implement
     """
 
     def area(self):
@@ -13,7 +15,7 @@ class BaseGeometry:
         Calculate the area of the geometric shape.
 
         Raises:
-            Exception: Indicates that the method is not implemented in the subclass.
+            Exception: Indicates that the method is not implemented
         """
         raise Exception("area() is not implemented")
 
