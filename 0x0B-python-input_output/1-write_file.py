@@ -16,6 +16,10 @@ def write_file(filename="", text=""):
         text(str, optional): The text to be written to the file
 
     """
+    if not isinstance(filename, str) or not isinstance(text, str):
+        raise TypeError("Both filename and text must be strings")
 
     with open(filename, 'w', encoding='UTF-8') as file:
-        return file.tell()
+        file.write(text)
+
+        return len(text)
