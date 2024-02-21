@@ -5,6 +5,7 @@ python3 file
 
 """
 
+
 def is_kind_of_class(obj, a_class):
 
     """
@@ -20,7 +21,7 @@ def is_kind_of_class(obj, a_class):
 
     Return:
         bool:
-            True if the object is an instance of the specified class or any 
+            True if the object is an instance of the specified class or any
             subclass, False otherwise
 
     """
