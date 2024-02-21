@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ a python file """
 
+
 def lookup(obj):
     """
 
