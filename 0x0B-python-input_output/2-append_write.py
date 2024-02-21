@@ -22,6 +22,6 @@ def append_write(filename="", text=""):
         raise TypeError("Both filename and text must be strings")
 
     with open(filename, 'a', encoding='UTF-8') as file:
-        file.append(text)
+        file.write(text)
 
         return len(text)
