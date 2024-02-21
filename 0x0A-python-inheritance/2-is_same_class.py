@@ -2,6 +2,7 @@
 
 """ python3 file """
 
+
 def is_same_class(obj, a_class):
 
     """
@@ -16,8 +17,7 @@ def is_same_class(obj, a_class):
 
     Returns:
         bool:
-            True if the object is an instance of the specified class or any subclass,
-            False otherwise.
+            True if the object is an instance of class or any subclass,
 
     """
 
