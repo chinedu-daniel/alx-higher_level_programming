@@ -2,6 +2,7 @@
 
 """ python3 files """
 
+
 def inherits_from(obj, a_class):
     """
 
@@ -15,11 +16,9 @@ def inherits_from(obj, a_class):
 
     Returns:
         bool:
-            True if the object inherits from the specified class (or is an 
+            True if the object inherits from the specified class (or is an
             instance of it), False otherwise
 
     """
 
     return (a_class in type(obj).mro())
-
-    
