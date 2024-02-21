@@ -17,4 +17,4 @@ def to_json_string(my_obj):
 
     """
 
-    return (json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}]))
+    return json.dumps(my_obj)
