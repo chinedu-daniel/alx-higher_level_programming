@@ -23,5 +23,19 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.y, 6)
         self.assertEqual(rect.id, 2)
 
+        # Test invalid updates
+        with self.assertRaises(TypeError):
+            rect.width = "invalid"
+        with self.assertRaises(ValueError):
+            rect.width = 0
+        with self.assertRaises(ValueError):
+            rect.x = -1
+        with self.assertRaises(TypeError):
+            rect.height = "invalid"
+        with self.assertRaises(ValueError):
+            rect.height = 0
+        with self.assertRaises(ValueError):
+            rect.y = -1
+
 if __name__ == "__main__":
     unittest.main()
