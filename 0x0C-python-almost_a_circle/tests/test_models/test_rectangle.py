@@ -36,22 +36,28 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect.y = -1
 
-    def test_area(self):
+    def test_area_calculation(self):
         # Create a rectangle with width=5 and height=10
         rect = Rectangle(5, 10)
         # Test the area calculation
         self.assertEqual(rect.area(), 50)
 
+        # Update width and height
         rect.width = 7
         rect.height = 3
+        # Test the area calculation after update
         self.assertEqual(rect.area(), 21)
 
+    def test_negative_values(self):
+        # Test with negative values (should raise exceptions)
+        rect = Rectangle(5, 10)
         with self.assertRaises(ValueError):
             rect.width = -5
             rect.area()
         with self.assertRaises(ValueError):
             rect.height = -10
             rect.area()
+
 
 if __name__ == "__main__":
     unittest.main()
