@@ -61,6 +61,7 @@ class TestRectangle(unittest.TestCase):
             rect.height = -10
             rect.area()
 
+class TestRectangleDisplay(unittest.TestCase):
     def setUp(self):
         self.saved_stdout = sys.stdout
         sys.stdout = StringIO()
