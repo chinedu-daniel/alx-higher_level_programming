@@ -1,5 +1,8 @@
 import unittest
 from models.rectangle import Rectangle
+from io import StringIO
+import sys
+
 
 class TestRectangle(unittest.TestCase):
     def test_constructor(self):
@@ -58,6 +61,31 @@ class TestRectangle(unittest.TestCase):
             rect.height = -10
             rect.area()
 
+    def setUp(self):
+        self.saved_stdout = sys.stdout
+        sys.stdout = StringIO()
+
+    def tearDown(self):
+        sys.stdout = self.saved_stdout
+
+    def test_display(self):
+        # Create a rectangle with width=5 and height=3
+        rect = Rectangle(5, 3)
+        
+        # Redirect stdout to capture printed output
+        sys.stdout = StringIO()
+        
+        # Call display method
+        rect.display()
+        
+        # Get the printed output
+        printed_output = sys.stdout.getvalue()
+
+        # Expected output
+        expected_output = "#####\n#####\n#####\n"
+        
+        # Assert that printed output matches expected output
+        self.assertEqual(printed_output, expected_output)
 
 if __name__ == "__main__":
     unittest.main()
