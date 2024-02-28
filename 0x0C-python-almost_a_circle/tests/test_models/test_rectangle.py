@@ -61,6 +61,7 @@ class TestRectangle(unittest.TestCase):
             rect.height = -10
             rect.area()
 
+class TestRectangleDisplay(unittest.TestCase):
     def setUp(self):
         self.saved_stdout = sys.stdout
         sys.stdout = StringIO()
@@ -84,6 +85,8 @@ class TestRectangle(unittest.TestCase):
         # Assert that printed output matches expected output
         self.assertEqual(printed_output, expected_output)
 
+
+class TestRectangleStr(unittest.TestCase):
     def test_str(self):
         # Create a rectangle with id=1, width=5, height=3, x=2, y=1
         rect = Rectangle(5, 3, 2, 1, 1)
