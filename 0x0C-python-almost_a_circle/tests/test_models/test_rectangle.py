@@ -61,7 +61,6 @@ class TestRectangle(unittest.TestCase):
             rect.height = -10
             rect.area()
 
-class TestRectangleDisplay(unittest.TestCase):
     def setUp(self):
         self.saved_stdout = sys.stdout
         sys.stdout = StringIO()
@@ -72,9 +71,6 @@ class TestRectangleDisplay(unittest.TestCase):
     def test_display(self):
         # Create a rectangle with width=5 and height=3
         rect = Rectangle(5, 3)
-        
-        # Redirect stdout to capture printed output
-        sys.stdout = StringIO()
         
         # Call display method
         rect.display()
@@ -87,6 +83,20 @@ class TestRectangleDisplay(unittest.TestCase):
         
         # Assert that printed output matches expected output
         self.assertEqual(printed_output, expected_output)
+
+    def test_str(self):
+        # Create a rectangle with id=1, width=5, height=3, x=2, y=1
+        rect = Rectangle(5, 3, 2, 1, 1)
+
+        # Call __str__ method
+        rect_str = str(rect)
+
+        # Expected output
+        expected_output = "[Rectangle] (1) 2/1 - 5/3"
+
+        # Assert that __str__ output matches expected output
+        self.assertEqual(rect_str, expected_output)
+
 
 if __name__ == "__main__":
     unittest.main()
